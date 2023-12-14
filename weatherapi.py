@@ -3,7 +3,7 @@ import requests
 from tkinter import messagebox
 
 def open_weather_app(root):
-    def get_weather(root):
+    def get_weather():
         api_key = "267ba5a73dba403285b214952231412"  # Replace with your WeatherAPI.com API key
         city = city_entry.get()
         url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}&aqi=no"
@@ -41,10 +41,3 @@ def open_weather_app(root):
         get_weather_button.pack()
         weather_display.pack()
 
-"""root = tk.Tk()
-root.title("Main App")
-
-weather_button = tk.Button(root, text="Open Weather App", command=open_weather_app)
-weather_button.pack()
-
-root.mainloop()"""
