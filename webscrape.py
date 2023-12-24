@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
+def webscrape(root):
+    pass
+
 # URL of the website to scrape (replace with your target URL)
 url = 'https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)'
 
