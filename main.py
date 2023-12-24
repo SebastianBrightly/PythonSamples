@@ -15,7 +15,7 @@ def open_sample_app(app_name,root):
         weaapp.open_weather_app(root)
         #to do fix why this one is not opening
     elif app_name == "Password Generator":
-        passgen.open_passwordGen()
+        passgen.open_passwordGen(root)
 
 
 root = tk.Tk()

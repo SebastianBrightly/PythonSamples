@@ -41,12 +41,3 @@ def open_weather_app(root):
     city_entry.pack()
     get_weather_button.pack()
     weather_display.pack()
-
-    
-    #root = tk.Tk()
-    #root.title("Main App")
-
-    #weather_button = tk.Button(root, text="Open Weather App", command=open_weather_app)
-    #weather_button.pack()
-
-    #root.mainloop()

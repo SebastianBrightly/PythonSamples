@@ -1,4 +1,4 @@
-def open_passwordGen():
+def open_passwordGen(root):
 
     import random
     import string
@@ -24,11 +24,12 @@ def open_passwordGen():
 
 
     # Create the ThemedTk window
-    window = ThemedTk(theme="scidgrey")  # You can change the theme (e.g., "scidgrey")
-
+    window = tk.Toplevel(root)
     window.title("Password Generator")
+    window.geometry("300x200")
+    window.minsize(300, 200)
 
-    # Widgets for password generation options
+    # Widgets for password generation optionsPasswordGenerator.py
     length_label = tk.Label(window, text="Password Length:")
     length_label.pack()
 
