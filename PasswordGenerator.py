@@ -1,57 +1,60 @@
-import random
-import string
-import tkinter as tk
-from ttkthemes import ThemedTk
+def open_passwordGen():
 
-def generate_password():
-    length = int(length_entry.get())
-    use_uppercase = uppercase_var.get()
-    use_digits = digits_var.get()
-    use_special_chars = special_chars_var.get()
+    import random
+    import string
+    import tkinter as tk
+    from ttkthemes import ThemedTk
 
-    chars = string.ascii_lowercase
-    if use_uppercase:
-        chars += string.ascii_uppercase
-    if use_digits:
-        chars += string.digits
-    if use_special_chars:
-        chars += string.punctuation
+    def generate_password():
+        length = int(length_entry.get()) if length_entry.get() else 10
+        use_uppercase = uppercase_var.get()
+        use_digits = digits_var.get()
+        use_special_chars = special_chars_var.get()
 
-    password = ''.join(random.choice(chars) for _ in range(length))
-    generated_password.set(password)
+        chars = string.ascii_lowercase
+        if use_uppercase:
+            chars += string.ascii_uppercase
+        if use_digits:
+            chars += string.digits
+        if use_special_chars:
+            chars += string.punctuation
 
-# Create the ThemedTk window
-window = ThemedTk(theme="arc")  # You can change the theme (e.g., "scidgrey")
+        password = ''.join(random.choice(chars) for _ in range(length))
+        generated_password.set(password)
 
-window.title("Password Generator")
 
-# Widgets for password generation options
-length_label = tk.Label(window, text="Password Length:")
-length_label.pack()
+    # Create the ThemedTk window
+    window = ThemedTk(theme="scidgrey")  # You can change the theme (e.g., "scidgrey")
 
-length_entry = tk.Entry(window)
-length_entry.pack()
+    window.title("Password Generator")
 
-uppercase_var = tk.BooleanVar()
-uppercase_check = tk.Checkbutton(window, text="Include Uppercase", variable=uppercase_var)
-uppercase_check.pack()
+    # Widgets for password generation options
+    length_label = tk.Label(window, text="Password Length:")
+    length_label.pack()
 
-digits_var = tk.BooleanVar()
-digits_check = tk.Checkbutton(window, text="Include Digits", variable=digits_var)
-digits_check.pack()
+    length_entry = tk.Entry(window)
+    length_entry.pack()
 
-special_chars_var = tk.BooleanVar()
-special_chars_check = tk.Checkbutton(window, text="Include Special Characters", variable=special_chars_var)
-special_chars_check.pack()
+    uppercase_var = tk.BooleanVar()
+    uppercase_check = tk.Checkbutton(window, text="Include Uppercase", variable=uppercase_var)
+    uppercase_check.pack()
 
-# Create a rounded button for generating passwords
-generate_button = tk.Button(window, text="Generate Password", command=generate_password)
-generate_button.pack()
+    digits_var = tk.BooleanVar()
+    digits_check = tk.Checkbutton(window, text="Include Digits", variable=digits_var)
+    digits_check.pack()
 
-# Widget to display the generated password
-generated_password = tk.StringVar()
-generated_password_label = tk.Label(window, textvariable=generated_password)
-generated_password_label.pack()
+    special_chars_var = tk.BooleanVar()
+    special_chars_check = tk.Checkbutton(window, text="Include Special Characters", variable=special_chars_var)
+    special_chars_check.pack()
 
-# Run the main loop
-window.mainloop()
+    # Create a rounded button for generating passwords
+    generate_button = tk.Button(window, text="Generate Password", command=generate_password)
+    generate_button.pack()
+
+    # Widget to display the generated password
+    generated_password = tk.StringVar()
+    generated_password_label = tk.Label(window, textvariable=generated_password)
+    generated_password_label.pack()
+
+    # Run the main loop
+    #window.mainloop()
