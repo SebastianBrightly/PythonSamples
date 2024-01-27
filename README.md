@@ -9,6 +9,7 @@ This repository contains a collection of Python examples showcasing different us
    - [Weather API Integration](#weather-api-integration)
    - [Web Scraping](#web-scraping)
    - [Password Generator](#password-generator)
+   -[Dashboarddemo](#Dashboarddemo)
    - [Example N](#example-n)
 3. [How to Use](#how-to-use)
 4. [Contributing](#contributing)
@@ -36,6 +37,12 @@ Welcome to the Python Examples Showcase Repository! The purpose of this reposito
 
 - [PasswordGenerator.py](/PasswordGenerator.py)
 - Description: This script generates secure passwords based on user preferences, allowing customization of password length and character types.
+- How to Run: Follow the instructions in the script's comments or README.
+
+### Dashboarddemo
+
+- -[Dashboarddemo](/Dashboarddemo)
+- Description: "I created an interactive dashboard demo using Python Dash for dynamic data visualization and exploration.".
 - How to Run: Follow the instructions in the script's comments or README.
 
 ### Example N
